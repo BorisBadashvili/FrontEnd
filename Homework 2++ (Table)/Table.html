@@ -1,0 +1,104 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework2</title>
+    <style>
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        form {
+            margin: 4px;
+        }
+        .buttons {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form method="GET">
+    <table>
+    <thead>
+        <tr>
+            <th>Control Type</th>
+            <th>Data</th>
+            <th>Control</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Text box</td>
+            <td>Name:</td>
+            <td><input type="text" name="entername" placeholder="Enter name" required></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>Password:</td>
+            <td><input type="password"></td>
+        </tr>
+        <tr>
+            <td>Text area</td>
+            <td>Address:</td>
+            <td><textarea name="Textarea" id="" cols="20" rows="4"></textarea></td>
+        </tr>
+        <tr>
+            <td>Drop down list</td>
+            <td>Area:</td>
+            <td>
+                <label for="dropdownlist" id="dropdownlist"></label>
+                <select name="dropdownlist" id="dropdownlist">
+                <option value="Center">Center</option>
+                <option value="Exact Center">Exact Center</option>
+                <option value="Near Center">Almost Center</option>
+                <option value="Near Center">Kinda Center</option>
+            </select>
+            </form>
+            </td>
+        </tr>
+        <tr>
+            <td>Check Box</td>
+            <td>Hobbies:</td>
+            <td>
+                <div><input type="checkbox" name="Hobbies" value="Sport">Sport</div>
+                <div><input type="checkbox" name="Hobbies" value="Reading">Reading</div>
+                <div><input type="checkbox" name="Hobbies" value="T.V">T.V</div>
+                <div><input type="checkbox" name="Hobbies" value="Internet">Internet</div>
+            </td>
+        </tr>
+        <tr>
+            <td>Radio Buttons</td>
+            <td>Gender</td>
+            <td>
+            <fieldset>
+                <legend>Gender Selection</legend>
+                <div><input type="radio" name="gender" value="male">Male</div>
+                <div><input type="radio" name="gender" value="female">Female</div>
+            </fieldset>
+            </td>   
+        </tr>
+        <tr>
+            <td>File upload</td>
+            <td>Your Image:</td>
+            <td><input type="file"></td>
+        </tr>
+        <tr>
+            <td>Buttons</td>
+            <td>Actions:</td>
+            <td>
+                <input class="buttons" type="submit" value="Submit">
+                <input class="buttons" type="reset" value="Reset">
+                <button class="buttons" type="submit" value="button">Button</button>
+            </td>
+        </tr>
+    </tbody>
+    </table>
+    </form>
+</body>
+</html>
