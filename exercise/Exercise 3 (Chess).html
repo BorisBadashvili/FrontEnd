@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chess Board</title>
+    <style>
+        body {
+            overflow: hidden;
+            width: 25%;
+            height: 900px;
+            margin: auto;
+            padding-top: 200px;
+            background:linear-gradient( darkblue, gold);
+        }
+        .insidewrapper {
+            height:60px;
+        }
+        .row1 div:nth-child(odd), .row3 div:nth-child(odd), .row5 div:nth-child(odd), .row7 div:nth-child(odd){
+            background-color: grey;
+        }
+        .row2 div:nth-child(even), .row4 div:nth-child(even), .row6 div:nth-child(even), .row8 div:nth-child(even){
+            background-color: grey;
+        }
+        .wrapper {
+            width: 480px;
+            height: 480px;
+            outline: 2px solid black;
+        }
+        .row1 div, .row2 div, .row3 div, .row4 div, .row5 div, .row6 div, .row7 div, .row8 div{
+            display:inline-block;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            vertical-align: middle; 
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="row1 insidewrapper">
+            <div>&#9814;</div><div>&#9816;</div><div>&#9815;</div><div>&#9813;</div><div>&#9812;</div><div>&#9815;</div><div>&#9816;</div><div>&#9814;</div>
+        </div>
+        <div class="row2 insidewrapper">
+            <div>&#9817;</div><div>&#9817;</div><div>&#9817;</div><div>&#9817;</div><div>&#9817;</div><div>&#9817;</div><div>&#9817;</div><div>&#9817;</div>
+        </div>
+        <div class="row3 insidewrapper">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        </div>
+        <div class="row4 insidewrapper">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        </div>
+        <div class="row5 insidewrapper">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        </div>
+        <div class="row6 insidewrapper">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        </div>
+        <div class="row7 insidewrapper">
+            <div>&#9823;</div><div>&#9823;</div><div>&#9823;</div><div>&#9823;</div><div>&#9823;</div><div>&#9823;</div><div>&#9823;</div><div>&#9823;</div>
+        </div>
+        <div class="row8 insidewrapper">
+            <div>&#9820;</div><div>&#9822;</div><div>&#9821;</div><div>&#9819;</div><div>&#9818;</div><div>&#9821;</div><div>&#9822;</div><div>&#9820;</div>
+        </div>
+    </div>
+</body>
+</html>
