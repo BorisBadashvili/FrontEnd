@@ -1,0 +1,82 @@
+h1 {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    background: linear-gradient(to right, rgba(255,0,0,0), rgb(255, 0, 255));
+    font-style: oblique;
+    color: grey;
+    margin: 0;
+}
+h1 div {
+    flex: 0.5;
+}
+#buttoncontainer {
+    text-align: center;
+    display: flex;
+    flex: 2;
+    padding: 5px;
+}
+#buttoncontainer button {
+    flex: 0.2;
+    margin: 5px;
+}
+
+#add {
+    border: 1px solid limegreen;
+    border-radius: 20px;
+    color: white;
+    background-color:limegreen;
+}
+
+#remove {
+    border: 1px solid red;
+    border-radius: 20px;
+    color: white;
+    background-color:red;
+}
+
+#update {
+    border: 1px solid blue;
+    border-radius: 20px;
+    color: white;
+    background-color:blue;
+}
+
+#containerParent {
+    display: flex;
+}
+
+#container2 {
+    height: 220px;
+    width: 200px;
+}
+
+#container3 {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    height: 232px;
+    width: 20px;
+}
+
+.class1 {
+    margin: 1px;
+    background-color: lightgrey;
+    width: 130px;
+    height: 20px;
+    text-align: center;
+    color: purple;
+    border-radius: 6px;
+}
+
+#filler {
+    width: 130px;
+    height: 20px;
+    margin: 1px;
+    background-color: lightgrey;
+    text-align: center;
+    color: navy;
+    border-radius: 6px;
+
+}
+
