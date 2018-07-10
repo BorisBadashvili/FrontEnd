@@ -1,30 +1,43 @@
 // Date Object
 
-let myDates = [ new Date("2018-04-30"), new Date("2018-05-02") ];
 
-function getNextStudyDate(date) {
-    var tomorrow = new Date();
-    tomorrow.setDate(date.getDate()+2);
 
-    if([1, 3, 5, 6].indexOf(tomorrow.getDay()) !== -1) {
-        return tomorrow
-    }
-    else {
-        return getNextStudyDate(tomorrow)
-    }
+let myDate = new Date(2018, 3, 30)
+console.log(myDate)
+let dateNumber = myDate.getDate()
+let monthNumber = myDate.getMonth()
+let dayNumber = myDate.getDay()
+
+let newdate = dateNumber + "</br>" + monthNumber + "</br>" + dayNumber
+
+
+
+// Month number into Month Name
+
+function monthNumberToMonthNumes(monthNumber) {
+    var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+return monthNames[monthNumber];
 }
 
-//  addDay Button function
 
-function addDay() {
 
-    
+// Week number into WeekDay Name
+
+function weekNumberToWeekName(dayNumber) {
+    var weekDay = ["Sun", "Mon", "Tues", "Wednes", "Thurs", "Fri", "Satur"];
+return weekDay[dayNumber];
+}
+
+
+//  addDay Button function  
+
+function addDay() {  
     
     for(k = 0; k < 10; k++){
         let div = document.createElement("div");
         div.style.background = "red"
         div.style.color = "white"
-        div.style.width = "20px"
+        div.style.width = "40px"
         div.style.height = "20px"
         div.style.margin = "0.5px"
         div.style.textAlign = "center"
@@ -39,34 +52,39 @@ function addDay() {
         dateDiv.setAttribute("id", "dateDiv");
         dateDiv.style.background = "green"
         dateDiv.style.color = "white"
-        dateDiv.style.width = "20px"
+        dateDiv.style.width = "40px"
         dateDiv.style.height = "20px"
         dateDiv.style.margin = "0.5px"
         dateDiv.style.textAlign = "center"
         dateDiv.style.borderRadius = "6px"
+        dateDiv.style.fontSize = "0.5em"
 
-        dateDiv.innerHTML = "date"
+        dateDiv.innerHTML = newdate
 
         document.querySelector("#container3").appendChild(dateDiv)
 
     }
+    document.getElementById("add").addEventListener("click", addDay);
     
-document.getElementById("add").addEventListener("click", addDay);
 
 
 // removeDay Button function
 
 function removeDay() {
 
-    for(let j = 0; j < 11 ; j++){
+    for(let j = 0; j < 10; j++){
 
         let removeDay = document.querySelector('.studentGrades');
         removeDay.parentNode.removeChild(removeDay);
 }}
 
+document.getElementById("remove").addEventListener("click", removeDay)
+
 function removeDate() {
-    let removeDate = document.getElementById('#dateDiv');
-    removeDate.parentNode.removeChild(removeDate);
+
+    let removeDate = document.querySelector("#dateDiv")
+    removeDate.parentNode.removeChild(removeDate)
 }
 
-document.getElementById("remove").addEventListener("click", removeDay, removeDate)
+document.getElementById("remove").addEventListener("click", removeDate)
+

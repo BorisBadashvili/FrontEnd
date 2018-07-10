@@ -67,6 +67,8 @@ h1 div {
     text-align: center;
     color: purple;
     border-radius: 6px;
+    font-size: 0.9em;
+    font-style: italic;
 }
 
 #filler {
@@ -80,3 +82,48 @@ h1 div {
 
 }
 
+.average {
+    background-color: lightseagreen;
+    color: white;
+    width: 50px;
+    height: 20px;
+    margin: 1px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+#average {
+    background-color: lightseagreen;
+    font-size: 0.9em;
+    font-style: italic;
+    color: white;
+    width: 50px;
+    height: 20px;
+    margin: 1px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.statistics {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to left, rgba(255,0,0,0), rgb(255, 0, 255));
+    color: blue;
+}
+
+.statistics p {
+    justify-content: center;
+    color: palegreen;
+    font-style: italic;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+span {
+    color: red; 
+}
+
+.author {
+    color: aliceblue;
+    font-size: 0.5em;   
+}
