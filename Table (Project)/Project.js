@@ -1,7 +1,5 @@
 // Date Object
 
-
-
 let myDate = new Date(2018, 3, 30)
 console.log(myDate)
 let dateNumber = myDate.getDate()
@@ -12,11 +10,15 @@ let newdate = dateNumber + "</br>" + monthNumber + "</br>" + dayNumber
 
 
 
-// Month number into Month Name
 
-function monthNumberToMonthNumes(monthNumber) {
+
+
+
+// Month number into Month Name
+function monthNumberToMonthNumes(monthNumber) { 
+
     var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-return monthNames[monthNumber];
+ return monthNames[monthNumber];
 }
 
 
@@ -27,6 +29,7 @@ function weekNumberToWeekName(dayNumber) {
     var weekDay = ["Sun", "Mon", "Tues", "Wednes", "Thurs", "Fri", "Satur"];
 return weekDay[dayNumber];
 }
+
 
 
 //  addDay Button function  
@@ -43,6 +46,8 @@ function addDay() {
         div.style.textAlign = "center"
         div.style.borderRadius = "6px"
         div.setAttribute("class", "studentGrades");
+        div.setAttribute("id", "sgID")
+        div.setAttribute("onclick", "averageFunc(this, Number(prompt('Please, enter number here')))");
         
         div.innerHTML = "0"
         
@@ -59,13 +64,28 @@ function addDay() {
         dateDiv.style.borderRadius = "6px"
         dateDiv.style.fontSize = "0.5em"
 
-        dateDiv.innerHTML = newdate
+        dateDiv.innerHTML = "sup"
 
         document.querySelector("#container3").appendChild(dateDiv)
-
     }
+
     document.getElementById("add").addEventListener("click", addDay);
     
+
+    function averageFunc(oreo, todaysResult) {
+        if (todaysResult > 5) {
+            oreo.innerHTML = 5;
+            oreo.style.background = "green";
+    
+            // if students result for current day is from 0, till 5, write rounded result.
+        } else if (todaysResult <= 5 && todaysResult >= 0) {
+            oreo.innerHTML = (Math.round(todaysResult));
+            oreo.style.background = "green";
+    
+        }
+        else {
+            oreo.innerHTML = 0;
+        }}
 
 
 // removeDay Button function
@@ -87,4 +107,5 @@ function removeDate() {
 }
 
 document.getElementById("remove").addEventListener("click", removeDate)
+
 
