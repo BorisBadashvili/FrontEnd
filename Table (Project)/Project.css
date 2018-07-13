@@ -1,4 +1,4 @@
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1920px) {
 
     body {
         background: linear-gradient(to right, #e96443, #904e95);
@@ -11,8 +11,7 @@
             "containerParent containerParent containerParent containerParent"
             "containerParent containerParent containerParent containerParent"
             "statistics statistics statistics statistics"
-        }
-    
+        } 
 
     .studentGrades {
         background: red;
@@ -80,7 +79,7 @@
         display: flex;
         flex-direction: column-reverse;
         flex-wrap: wrap;
-        max-height: 240px;
+        max-height: 250px;
         width: 750px;
         overflow: auto;
     }
@@ -154,9 +153,24 @@
         font-size: 0.5em;   
     }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 990px) {
         body {
             background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
 
@@ -183,7 +197,7 @@
             }
         }
     
-    @media screen and (max-width: 325px) {
+    @media screen and (max-width: 450px) {
         body {
             background-color:lightsalmon;
             margin: 0px auto;
@@ -199,11 +213,25 @@
         #buttoncontainer {
             flex-direction: column;
         }
+        /* .dateDiv {
+            background: green;
+            color: white;
+            width: 40px;
+            height: 60px;
+            margin: 0.5px;
+            text-align: center;
+            border-radius: 6px;
+            font-size: 0.5em;
 
-        .container3 > div {
-            width: 65px;
-            height: 12px;
-        }
+            dateDiv.style.background = "green"
+            dateDiv.style.color = "white"
+            dateDiv.style.width = "40px"
+            dateDiv.style.height = "20px"
+            dateDiv.style.margin = "0.5px"
+            dateDiv.style.textAlign = "center"
+            dateDiv.style.borderRadius = "6px"
+            dateDiv.style.fontSize = "0.5em"
+        } */
     
         .statistics {
             margin-top: 10px;
