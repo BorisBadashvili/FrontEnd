@@ -1,139 +1,250 @@
-body {
-    margin: 0px auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: 
-        "buttoncontainer buttoncontainer buttoncontainer buttoncontainer"
-        "containerParent containerParent containerParent containerParent"
-        "statistics statistics statistics statistics"
-        "statistics statistics statistics statistics"
-        "statistics statistics statistics statistics"
+@media screen and (max-width: 1600px) {
+
+    body {
+        overflow: hidden;
+        margin: 0px auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+            "buttoncontainer buttoncontainer buttoncontainer buttoncontainer"
+            "containerParent containerParent containerParent containerParent"
+            "containerParent containerParent containerParent containerParent"
+            "statistics statistics statistics statistics"
+        }
+    
+    #buttoncontainer {
+        display: flex;
+        flex: 1;
+        justify-content: space-around;
+        background: linear-gradient(to right, rgba(255,0,0,0), rgb(255, 0, 255));
+        font-style: oblique;
+        color: grey;
+        margin: 0;
+        text-align: center;
+        padding: 5px;
+        grid-area: buttoncontainer;
     }
-
-
-
-#buttoncontainer {
-    display: flex;
-    flex: 1;
-    justify-content: space-around;
-    background: linear-gradient(to right, rgba(255,0,0,0), rgb(255, 0, 255));
-    font-style: oblique;
-    color: grey;
-    margin: 0;
-    text-align: center;
-    padding: 5px;
-    grid-area: buttoncontainer;
-}
-#buttoncontainer button {
-    flex: 0.2;
-    margin: 5px;
-}
-
-#add {
-    border: 1px solid limegreen;
-    border-radius: 20px;
-    color: white;
-    background-color:limegreen;
-}
-
-#remove {
-    border: 1px solid red;
-    border-radius: 20px;
-    color: white;
-    background-color:red;
-}
-
-#update {
-    border: 1px solid blue;
-    border-radius: 20px;
-    color: white;
-    background-color:blue;
-}
-
-#containerParent {
-    display: flex;
-    grid-area: containerParent;
-}
-
-#container2 {
-    height: 220px;
-    width: 200px;
-}
-
-#container3 {
-    display: flex;
-    flex-direction: column-reverse;
-    flex-wrap: wrap;
-    height: 232px;
-    width: 20px;
-}
-
-.class1 {
-    margin: 1px;
-    background-color: lightgrey;
-    width: 130px;
-    height: 20px;
-    text-align: center;
-    color: purple;
-    border-radius: 6px;
-    font-size: 0.9em;
-    font-style: italic;
-}
-
-#filler {
-    width: 130px;
-    height: 20px;
-    margin: 1px;
-    background-color: lightgrey;
-    text-align: center;
-    color: navy;
-    border-radius: 6px;
-
-}
-
-.average {
-    background-color: lightseagreen;
-    color: white;
-    width: 50px;
-    height: 20px;
-    margin: 1px;
-    text-align: center;
-    border-radius: 6px;
-}
-
-#average {
-    background-color: lightseagreen;
-    font-size: 0.9em;
-    font-style: italic;
-    color: white;
-    width: 50px;
-    height: 20px;
-    margin: 1px;
-    text-align: center;
-    border-radius: 6px;
-}
-
-.statistics {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(to left, rgba(255,0,0,0), rgb(255, 0, 255));
-    color: blue;
-    grid-area: statistics;
-}
-
-.statistics p {
-    justify-content: center;
-    color: palegreen;
-    font-style: italic;
-    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
-}
-
-span {
-    color: red; 
-}
-
-.author {
-    color: aliceblue;
-    font-size: 0.5em;   
-}
+    #buttoncontainer button {
+        flex: 0.2;
+        margin: 5px;
+    }
+    
+    #add {
+        border: 1px solid limegreen;
+        border-radius: 20px;
+        color: white;
+        background-color:limegreen;
+    }
+    
+    #remove {
+        border: 1px solid red;
+        border-radius: 20px;
+        color: white;
+        background-color:red;
+    }
+    
+    #update {
+        border: 1px solid blue;
+        border-radius: 20px;
+        color: white;
+        background-color:blue;
+    }
+    
+    #containerParent {
+        overflow: hidden;
+        margin: 6px;
+        display: flex;
+        flex-direction: row;
+        grid-area: containerParent;
+    }
+    
+    #container2 {
+        height: 220px;
+        width: 200px;
+    }
+    
+    #container3 {
+        margin: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        max-height: 240px;
+        width: 750px;
+        overflow: auto;
+    }
+    
+    .class1 {
+        margin: 1px;
+        background-color: lightgrey;
+        width: 130px;
+        height: 20px;
+        text-align: center;
+        color: purple;
+        border-radius: 6px;
+        font-size: 0.9em;
+        font-style: italic;
+    }
+    
+    #filler {
+        width: 130px;
+        height: 20px;
+        margin: 1px;
+        background-color: lightgrey;
+        text-align: center;
+        color: navy;
+        border-radius: 6px;
+    
+    }
+    
+    .average {
+        background-color: lightseagreen;
+        color: white;
+        width: 50px;
+        height: 20px;
+        margin: 1px;
+        text-align: center;
+        border-radius: 6px;
+    }
+    
+    #average {
+        background-color: lightseagreen;
+        font-size: 0.9em;
+        font-style: italic;
+        color: white;
+        width: 50px;
+        height: 20px;
+        margin: 1px;
+        text-align: center;
+        border-radius: 6px;
+    }
+    
+    .statistics {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: linear-gradient(to left, rgba(255,0,0,0), rgb(255, 0, 255));
+        color: blue;
+        grid-area: statistics;
+    }
+    
+    .statistics p {
+        justify-content: center;
+        color: palegreen;
+        font-style: italic;
+        text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    }
+    
+    span {
+        color: red; 
+    }
+    
+    .author {
+        color: aliceblue;
+        font-size: 0.5em;   
+    }
+    }
+    
+    
+    @media screen and (max-width: 550px) {
+        body {
+            background-color: black;
+            margin: 0px auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: 
+            "statistics statistics statistics"
+            "containerParent containerParent containerParent"
+            "containerParent containerParent containerParent"
+            "buttoncontainer buttoncontainer buttoncontainer "
+            }
+    
+            .statistics {
+                flex-direction: column;
+                margin-top: 10px;
+                color: wheat;
+                grid-area: statistics;
+                font-size: 0.6em;
+            }
+    
+            #buttoncontainer button {
+                font-size: 0.6em;
+            }
+    
+    }
+    
+    @media screen and (max-width: 250px) {
+        body {
+            background-color:lightsalmon;
+            margin: 0px auto;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-areas: 
+            "statistics"
+            "containerParent  "
+            "containerParent  "
+            "buttoncontainer   "
+            }
+    
+        .statistics {
+            margin-top: 10px;
+            color: wheat;
+            grid-area: statistics;
+            font-size: 0.4em;
+        }
+    
+        #buttoncontainer button {
+            font-size: 0.4em;
+        }
+    
+        .container2 {
+            font-size: 0.6em;
+        }
+    
+        #filler {
+            width: 65px;
+            height: 12px;
+            margin: 1px;
+            background-color: lightgrey;
+            text-align: center;
+            color: navy;
+            border-radius: 6px;
+        }
+    
+        .class1 {
+            padding-top: 5px 0;
+            margin: 1px;
+            background-color: lightgrey;
+            width: 65px;
+            height: 12px;
+            color: purple;
+            border-radius: 6px;
+            font-style: italic;
+        }
+    
+        .average {
+            font-size: 0.6em;
+            background-color: lightseagreen;
+            color: white;
+            width: 40px;
+            height: 12px;
+            margin: 1px;
+            text-align: center;
+            border-radius: 6px;
+        }
+    
+        #average {
+            background-color: lightseagreen;
+            font-size: 0.6em;
+            font-style: italic;
+            color: white;
+            width: 40px;
+            height: 12px;
+            margin: 1px;
+            text-align: center;
+            border-radius: 6px;
+        }
+    
+        span {
+            color: blue;
+        }
+    }
