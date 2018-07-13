@@ -1,5 +1,5 @@
 @media screen and (max-width: 1920px) {
-
+    /* Body + Buttons Styling*/
     body {
         background: linear-gradient(to right, #e96443, #904e95);
         overflow-x: hidden;
@@ -12,18 +12,6 @@
             "containerParent containerParent containerParent containerParent"
             "statistics statistics statistics statistics"
         } 
-
-    .studentGrades {
-        background: red;
-        color: white;
-        width: 40px;
-        height: 20px;
-        margin: 0.5px;
-        text-align: center;
-        border-radius: 6px;
-    }
-
-
     #buttoncontainer {
         display: flex;
         flex: 1;
@@ -36,31 +24,38 @@
         grid-area: buttoncontainer;
     }
     #buttoncontainer button {
-        flex: 0.2;
+        flex: 0.2.5;
         margin: 5px;
     }
-    
     #add {
+        font-size: 1.5em;
         border: 1px solid limegreen;
         border-radius: 20px;
         color: white;
         background-color:limegreen;
-    }
-    
+    }  
     #remove {
+        font-size: 1.5em;
         border: 1px solid red;
         border-radius: 20px;
         color: white;
         background-color:red;
-    }
-    
+    } 
     #update {
+        font-size: 1.5em;
         border: 1px solid blue;
         border-radius: 20px;
         color: white;
         background-color:blue;
     }
-    
+    #buttoncontainer > div {
+        padding-top: 5px;
+        color: slateblue;
+        font-size: 2em;
+    }
+    /* --- END ---   Body / Buttons Styling   --- END --- */
+
+    /* Names + Average + Table */
     #containerParent {
         overflow: hidden;
         margin: 6px;
@@ -68,73 +63,95 @@
         flex-direction: row;
         grid-area: containerParent;
     }
-    
-    #container2 {
-        height: 220px;
-        width: 200px;
+    .dateDiv {
+        background: green;
+        color: white;
+        padding-top: 15px;
+        width: 50px;
+        height: 55px;
+        margin: 1px;
+        text-align: center;
+        border-radius: 6px;     
     }
-    
+    .studentGrades {
+        background: red;
+        color: white;
+        padding-top: 15px;
+        width: 50px;
+        height: 40px;
+        margin: 1.5px;
+        text-align: center;
+        border-radius: 6px;
+    }   
     #container3 {
-        margin: auto;
+        margin: 0 auto;
         display: flex;
         flex-direction: column-reverse;
         flex-wrap: wrap;
-        max-height: 250px;
-        width: 750px;
+        height: 680px;
+        width: 1300px;
         overflow: auto;
+        position: relative;
+        bottom: 20px;
     }
-    
     .class1 {
-        margin: 1px;
+        margin: 2.5px;
         background-color: lightgrey;
-        width: 130px;
-        height: 20px;
+        padding-top: 15px;
+        width: 200px;
+        height: 40px;
         text-align: center;
         color: purple;
         border-radius: 6px;
-        font-size: 0.9em;
+        font-size: 1.5em;
         font-style: italic;
     }
-    
     #filler {
-        width: 130px;
-        height: 20px;
-        margin: 1px;
+        padding-top: 15px;
+        font-size: 1.5em;
+        font-style: italic;
+        width: 200px;
+        height: 55px;
+        margin: 2.5px;
         background-color: lightgrey;
         text-align: center;
         color: navy;
         border-radius: 6px;
-    
     }
-    
     .average {
         background-color: lightseagreen;
+        font-size: 1.5em;
         color: white;
-        width: 50px;
-        height: 20px;
-        margin: 1px;
+        font-style: italic;
+        padding-top: 15px;
+        width: 150px;
+        height: 40px;
+        margin: 2.5px;
         text-align: center;
         border-radius: 6px;
-    }
-    
+    }    
     #average {
         background-color: lightseagreen;
-        font-size: 0.9em;
+        font-size: 1.5em;
+        padding-top: 15px;
         font-style: italic;
         color: white;
-        width: 50px;
-        height: 20px;
-        margin: 1px;
+        width: 150px;
+        height: 55px;
+        margin: 2.5px;
         text-align: center;
         border-radius: 6px;
     }
+    /* --- END --- Names + Average + Table --- END --- */
     
+    /* Statistics Styling */
     .statistics {
         display: flex;
         justify-content: space-around;
         align-items: center;
         color: blue;
         grid-area: statistics;
+        font-size: 1.5em;
     }
     
     .statistics p {
@@ -146,153 +163,207 @@
     
     span {
         color: red; 
-    }
+    }}
+    /* --- END --- Statistics Styling --- END ---*/
     
-    .author {
-        color: aliceblue;
-        font-size: 0.5em;   
-    }
-    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
+    /* Media Query Max-Width 990px */
     @media screen and (max-width: 990px) {
-        body {
-            background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
-
-            margin: 0px auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-areas: 
-            "statistics statistics statistics"
-            "containerParent containerParent containerParent"
-            "containerParent containerParent containerParent"
-            "buttoncontainer buttoncontainer buttoncontainer "
-            }
-
-            .statistics {
-                flex-direction: column;
-                margin-top: 10px;
-                color: wheat;
-                grid-area: statistics;
-                font-size: 0.6em;
-            }
-    
-            #buttoncontainer button {
-                font-size: 0.6em;
-            }
+    body {
+        background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
+        margin: 0px auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "statistics statistics statistics"
+        "containerParent containerParent containerParent"
+        "containerParent containerParent containerParent"
+        "buttoncontainer buttoncontainer buttoncontainer "
         }
-    
-    @media screen and (max-width: 450px) {
-        body {
-            background-color:lightsalmon;
-            margin: 0px auto;
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            grid-template-areas: 
-            "statistics"
-            "buttoncontainer"
-            "containerParent"
-            "containerParent"
-            }
-        
-        #buttoncontainer {
-            flex-direction: column;
-        }
-        /* .dateDiv {
-            background: green;
-            color: white;
-            width: 40px;
-            height: 60px;
-            margin: 0.5px;
-            text-align: center;
-            border-radius: 6px;
-            font-size: 0.5em;
-
-            dateDiv.style.background = "green"
-            dateDiv.style.color = "white"
-            dateDiv.style.width = "40px"
-            dateDiv.style.height = "20px"
-            dateDiv.style.margin = "0.5px"
-            dateDiv.style.textAlign = "center"
-            dateDiv.style.borderRadius = "6px"
-            dateDiv.style.fontSize = "0.5em"
-        } */
-    
         .statistics {
-            margin-top: 10px;
+            flex-direction: column;
             color: wheat;
             grid-area: statistics;
-            font-size: 0.4em;
+            font-size: 1.2em;
         }
-    
         #buttoncontainer button {
-            font-size: 0.4em;
+            font-size: 1em;
         }
-    
-        .container2 {
-            font-size: 0.6em;
-        }
-    
-        #filler {
-            width: 65px;
-            height: 12px;
-            margin: 1px;
+        .class1 {
             background-color: lightgrey;
+            padding-top: 10px;
+            width: 100px;
+            height: 35px;
+            margin: 2.5px;
+            text-align: center;
+            color: purple;
+            border-radius: 6px;
+            font-size: 0.86em;
+            font-style: italic;
+        }
+        #filler {
+            background-color: lightgrey;
+            padding-top: 10px;
+            font-size: 1.2em;
+            font-style: italic;
+            width: 100px;
+            height: 30px;
+            margin: 2.5px;
             text-align: center;
             color: navy;
             border-radius: 6px;
         }
-    
-        .class1 {
-            padding-top: 5px 0;
-            margin: 1px;
-            background-color: lightgrey;
-            width: 65px;
-            height: 12px;
-            color: purple;
-            border-radius: 6px;
-            font-style: italic;
-        }
-    
         .average {
-            font-size: 0.6em;
             background-color: lightseagreen;
+            font-size: 1.5em;
             color: white;
-            width: 40px;
-            height: 12px;
-            margin: 1px;
+            font-style: italic;
+            padding-top: 10px;
+            width: 100px;
+            height: 35px;
+            margin: 2.5px;
             text-align: center;
             border-radius: 6px;
-        }
-    
+        }    
         #average {
             background-color: lightseagreen;
-            font-size: 0.6em;
+            font-size: 1.5em;
+            padding-top: 10px;
             font-style: italic;
             color: white;
-            width: 40px;
-            height: 12px;
-            margin: 1px;
+            width: 100px;
+            height: 30px;
+            margin: 2.5px;
             text-align: center;
             border-radius: 6px;
         }
-    
-        span {
-            color: blue;
+        .dateDiv {
+            background: green;
+            color: white;
+            width: 35px;
+            height: 30px;
+            margin: 2px;
+            text-align: center;
+            border-radius: 6px;     
         }
+        .studentGrades {
+            background: red;
+            color: white;
+            width: 35px;
+            height: 25px;
+            margin: 2.5px;
+            text-align: center;
+            border-radius: 6px;
+        }   
+        #container3 {
+            box-sizing: border-box;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column-reverse;
+            flex-wrap: wrap;
+            height: 540px;
+            width: 450px;
+            overflow: auto;
+        } 
+    }
+    /* --- END --- Media Query Max-Width 990px --- END ---*/
+
+    /* Media Query Max-Width 550px */
+
+    @media screen and (max-width: 550px) {
+        body {
+        background-color:lightsalmon;
+        margin: 0px auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+        "statistics"
+        "buttoncontainer"
+        "containerParent"
+        "containerParent"
+        }
+        .statistics {
+            flex-direction: column;
+            color: wheat;
+            grid-area: statistics;
+            font-size: 1.1em;
+        }
+        #buttoncontainer button {
+            font-size: 0.8em;
+        }
+        .class1 {
+            background-color: lightgrey;
+            padding-top: 10px;
+            width: 70px;
+            height: 35px;
+            margin: 2.5px;
+            text-align: center;
+            color: purple;
+            border-radius: 6px;
+            font-size: 0.86em;
+            font-style: italic;
+        }
+        #filler {
+            background-color: lightgrey;
+            padding-top: 10px;
+            font-size: 1.2em;
+            font-style: italic;
+            width: 70px;
+            height: 50px;
+            margin: 2.5px;
+            text-align: center;
+            color: navy;
+            border-radius: 6px;
+        }
+        .average {
+            background-color: lightseagreen;
+            font-size: 1.5em;
+            color: white;
+            font-style: italic;
+            padding-top: 10px;
+            width: 70px;
+            height: 35px;
+            margin: 2.5px;
+            text-align: center;
+            border-radius: 6px;
+        }    
+        #average {
+            background-color: lightseagreen;
+            font-size: 1.2em;
+            font-style: italic;
+            color: white;
+            width: 70px;
+            height: 50px;
+            margin: 2.5px;
+            text-align: center;
+            border-radius: 6px;
+        }
+        .dateDiv {
+            background: green;
+            color: white;
+            width: 40px;
+            height: 50px;
+            margin: 2px;
+            text-align: center;
+            border-radius: 6px;     
+        }
+        .studentGrades {
+            background: red;
+            color: white;
+            width: 40px;
+            height: 30px;
+            margin: 1px;
+            text-align: center;
+            border-radius: 6px;
+        }   
+        #container3 {
+            box-sizing: border-box;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column-reverse;
+            flex-wrap: wrap;
+            height: 570px;
+            width: 180px;
+            overflow: auto;
+        } 
     }
