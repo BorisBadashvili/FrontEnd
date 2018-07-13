@@ -38,15 +38,14 @@ function addDay() {
 
     for (k = 1; k < 11; k++) {
         let div = document.createElement("div");
-        div.style.background = "red"
-        div.style.color = "white"
-        div.style.width = "40px"
-        div.style.height = "20px"
-        div.style.margin = "0.5px"
-        div.style.textAlign = "center"
-        div.style.borderRadius = "6px"
+        // div.style.background = "red"
+        // div.style.color = "white"
+        // div.style.width = "40px"
+        // div.style.height = "20px"
+        // div.style.margin = "0.5px"
+        // div.style.textAlign = "center"
+        // div.style.borderRadius = "6px"
         div.setAttribute("class", "studentGrades")
-        // div.setAttribute("class", "sgID" + k)
         div.className += " sgID" + k
         div.setAttribute("onclick", "averageFunc(this, Number(prompt('Please, enter number here')))");
 
