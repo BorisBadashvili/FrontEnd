@@ -1,20 +1,28 @@
-h1 {
+body {
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+        "buttoncontainer buttoncontainer buttoncontainer buttoncontainer"
+        "containerParent containerParent containerParent containerParent"
+        "statistics statistics statistics statistics"
+        "statistics statistics statistics statistics"
+        "statistics statistics statistics statistics"
+    }
+
+
+
+#buttoncontainer {
     display: flex;
     flex: 1;
-    justify-content: center;
+    justify-content: space-around;
     background: linear-gradient(to right, rgba(255,0,0,0), rgb(255, 0, 255));
     font-style: oblique;
     color: grey;
     margin: 0;
-}
-h1 div {
-    flex: 0.5;
-}
-#buttoncontainer {
     text-align: center;
-    display: flex;
-    flex: 2;
     padding: 5px;
+    grid-area: buttoncontainer;
 }
 #buttoncontainer button {
     flex: 0.2;
@@ -44,6 +52,7 @@ h1 div {
 
 #containerParent {
     display: flex;
+    grid-area: containerParent;
 }
 
 #container2 {
@@ -110,6 +119,7 @@ h1 div {
     align-items: center;
     background: linear-gradient(to left, rgba(255,0,0,0), rgb(255, 0, 255));
     color: blue;
+    grid-area: statistics;
 }
 
 .statistics p {
