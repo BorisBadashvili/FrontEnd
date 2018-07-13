@@ -86,13 +86,11 @@
     #container3 {
         margin: 0 auto;
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         flex-wrap: wrap;
         height: 680px;
         width: 1300px;
         overflow: auto;
-        position: relative;
-        bottom: 20px;
     }
     .class1 {
         margin: 2.5px;
@@ -182,6 +180,7 @@
         }
         .statistics {
             flex-direction: column;
+            /* margin-top: 10px; */
             color: wheat;
             grid-area: statistics;
             font-size: 1.2em;
@@ -250,16 +249,15 @@
             background: red;
             color: white;
             width: 35px;
-            height: 25px;
-            margin: 2.5px;
+            height: 28px;
+            margin: 2px;
             text-align: center;
             border-radius: 6px;
         }   
         #container3 {
-            box-sizing: border-box;
             margin: 0 auto;
             display: flex;
-            flex-direction: column-reverse;
+            flex-direction: column;
             flex-wrap: wrap;
             height: 540px;
             width: 450px;
@@ -360,7 +358,7 @@
             box-sizing: border-box;
             margin: 0 auto;
             display: flex;
-            flex-direction: column-reverse;
+            flex-direction: column;
             flex-wrap: wrap;
             height: 570px;
             width: 180px;

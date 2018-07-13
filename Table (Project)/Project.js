@@ -18,12 +18,20 @@
 //     return weekDay[dayNumber];
 // }
 
-
 //  addDay Button function  
 
 function addDay() {
-// For loop to create 10 div elements. (For Grades)
-    for (k = 1; k < 11; k++) {     
+    // Creates 1 div element. (For Date)
+    let dateDiv = document.createElement("div");
+    dateDiv.setAttribute("class", "dateDiv");
+
+    dateDiv.innerHTML = "sup"
+
+    document.querySelector("#container3").appendChild(dateDiv)
+
+    // For loop to create 10 div elements. (For Grades)
+    
+    for (k = 1; k < 11; k++) {
         let div = document.createElement("div");
         div.setAttribute("class", "studentGrades")
         div.className += " sgID" + k
@@ -31,18 +39,30 @@ function addDay() {
         div.innerHTML = "0"
         document.querySelector("#container3").appendChild(div)
     }
-// Creates 1 div element. (For Date)
-    let dateDiv = document.createElement("div"); 
-    dateDiv.setAttribute("class", "dateDiv");
-
-    dateDiv.innerHTML = "sup"
-
-    document.querySelector("#container3").appendChild(dateDiv)
-
     averageGrade()
 
 }
 document.getElementById("add").addEventListener("click", addDay); // eventListener for AddDay Button, Calls addDay function.
+
+// addDay function --- END ---
+
+// removeDay Button function
+
+function removeDay() {
+    // Looping through all 10 div (grades - redbox) elements to delete them.
+
+    for (let j = 0; j < 10; j++) {
+        let removeDay = document.querySelector('.studentGrades');
+        removeDay.parentNode.removeChild(removeDay);
+    }
+
+    // Delets div which contains (date div - greenbox)
+    let removeDate = document.querySelector(".dateDiv")
+    removeDate.parentNode.removeChild(removeDate)
+}
+document.getElementById("remove").addEventListener("click", removeDay) //eventListener for removeDay button, Calls removeDay function.
+
+//removeDay Button function --- END ---
 
 
 // Function for userInput, changes color if number is inputed also, rounds and binds numbers to certain logic. (0.5 = 1... etc.)
@@ -50,23 +70,23 @@ function userInput(userInputDiv, todaysResult) {
     if (todaysResult > 5) {
         userInputDiv.innerHTML = 5;
         userInputDiv.style.background = "darkblue";
-       
-    } else if (todaysResult <= 5 && todaysResult >= 0) { 
+
+    } else if (todaysResult <= 5 && todaysResult >= 0) {
         userInputDiv.innerHTML = (Math.round(todaysResult));
         userInputDiv.style.background = "darkblue";
 
     }
     else {
-        userInputDiv.innerHTML = 10;
+        userInputDiv.innerHTML = 0;
     }
 
     averageGrade()
 }
+// --- END --- Of userInput function.
 
-// averageGrade calculates 
+// Creating function averageGrade --- calculates totdaldays by looping through .dateDiv (green box), Takes .average as an array.
 
 function averageGrade() {
-debugger;
     let totalDays = document.querySelectorAll(".dateDiv").length
     let studentsAvg = Array.from(document.querySelectorAll(".average"))
 
@@ -80,15 +100,10 @@ debugger;
     }
 }
 
-// removeDay Button function
+// --- END --- averageGrade function --- END ---
 
-function removeDay() {
+// Statistics - totalDays, missedLessons, averageMark.
 
-    for (let j = 0; j < 10; j++) {
-        let removeDay = document.querySelector('.studentGrades');
-        removeDay.parentNode.removeChild(removeDay);
-    }
-    let removeDate = document.querySelector(".dateDiv")
-    removeDate.parentNode.removeChild(removeDate)
-}
-document.getElementById("remove").addEventListener("click", removeDay)
+// let totalDays = document.querySelectorAll(".dateDiv").length
+// document.querySelector(".totalDays").appendChild(totalDays)
+
