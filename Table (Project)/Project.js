@@ -52,7 +52,7 @@ function removeDay() {
     // Delets div which contains (date div - greenbox)
     let removeDate = document.querySelector(".dateDiv:last-child")
     removeDate.parentNode.removeChild(removeDate)
-    
+
     // Looping through all 10 div (grades - redbox) elements to delete them.
     for (let j = 0; j < 10; j++) {
         let removeDay = document.querySelector('.studentGrades:last-child')
@@ -102,7 +102,7 @@ function averageGrade() {
 
 // --- END --- averageGrade function --- END ---
 
-// Statistics - totalDays, missedLessons, averageMark.
+// Statistics - totalDays.
 
     function statTotalDays() {
     let spanTdays = document.createElement("span")
@@ -114,4 +114,27 @@ function averageGrade() {
 
 }
 setInterval(statTotalDays, 100);
-//--- END --- Statistics --- END ---
+//--- END --- Statistics - totalDays --- END ---
+
+
+
+//  Statistics - Missed Lessons
+
+// function missedLessons() {
+//     debugger;
+    
+//     {
+//         let mLessons = 0
+//         mLessons++;
+
+//         let missedLessonSpan = document.createElement("span")
+//         document.querySelector(".missedLessons").appendChild(missedLessonSpan)
+//         spanTdays.setAttribute("id", "missedLessonSpan")
+//         document.querySelector("#missedLessonSpan").innerHTML = mLessons;
+//         let sum = 0;
+//         sum + 1;
+//         } 
+// } 
+// setInterval(missedLessons, 100);
+
+// --- END --- Statistics - Missed Lessons --- END ---
