@@ -84,7 +84,7 @@ function userInput(userInputDiv, todaysResult) {
 }
 // --- END --- Of userInput function.
 
-// Creating function averageGrade --- calculates totdaldays by looping through .dateDiv (green box), Takes .average as an array.
+// Creating function averageGrade --- calculates totaldays by looping through .dateDiv (green box), Takes .average as an array.
 
 function averageGrade() {
     let totalDays = document.querySelectorAll(".dateDiv").length
@@ -104,16 +104,17 @@ function averageGrade() {
 
 // Statistics - totalDays.
 
-    function statTotalDays() {
+    function statTotalDays() { // This function creates SPAN pushes content into it.
     let spanTdays = document.createElement("span")
     document.querySelector(".totalDays").appendChild(spanTdays)
     spanTdays.setAttribute("id", "spanTdays")
 
-    let statisticsTotalDay = Number(document.querySelectorAll(".dateDiv").length)
+    let statisticsTotalDay = Number(document.querySelectorAll(".dateDiv").length) // Calculates how much .dateDiv-s are there and throws a number into a previously created SPAN.
     document.querySelector("#spanTdays").innerHTML = statisticsTotalDay
 
 }
 setInterval(statTotalDays, 100);
+
 //--- END --- Statistics - totalDays --- END ---
 
 
