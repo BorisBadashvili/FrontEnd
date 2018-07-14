@@ -21,14 +21,7 @@
 //  addDay Button function  
 
 function addDay() {
-    // Creates 1 div element. (For Date)
-    let dateDiv = document.createElement("div");
-    dateDiv.setAttribute("class", "dateDiv");
-
-    dateDiv.innerHTML = "sup"
-
-    document.querySelector("#container3").appendChild(dateDiv)
-
+    
     // For loop to create 10 div elements. (For Grades)
     
     for (k = 1; k < 11; k++) {
@@ -39,6 +32,13 @@ function addDay() {
         div.innerHTML = "0"
         document.querySelector("#container3").appendChild(div)
     }
+    // Creates 1 div element. (For Date)
+    let dateDiv = document.createElement("div");
+    dateDiv.setAttribute("class", "dateDiv");
+
+    dateDiv.innerHTML = "sup"
+
+    document.querySelector("#container3").appendChild(dateDiv)
     averageGrade()
 
 }
@@ -49,16 +49,16 @@ document.getElementById("add").addEventListener("click", addDay); // eventListen
 // removeDay Button function
 
 function removeDay() {
+    // Delets div which contains (date div - greenbox)
+    let removeDate = document.querySelector(".dateDiv:last-child")
+    removeDate.parentNode.removeChild(removeDate)
+    
     // Looping through all 10 div (grades - redbox) elements to delete them.
-
     for (let j = 0; j < 10; j++) {
-        let removeDay = document.querySelector('.studentGrades');
+        let removeDay = document.querySelector('.studentGrades:last-child')
         removeDay.parentNode.removeChild(removeDay);
     }
 
-    // Delets div which contains (date div - greenbox)
-    let removeDate = document.querySelector(".dateDiv")
-    removeDate.parentNode.removeChild(removeDate)
 }
 document.getElementById("remove").addEventListener("click", removeDay) //eventListener for removeDay button, Calls removeDay function.
 
@@ -104,6 +104,14 @@ function averageGrade() {
 
 // Statistics - totalDays, missedLessons, averageMark.
 
-// let totalDays = document.querySelectorAll(".dateDiv").length
-// document.querySelector(".totalDays").appendChild(totalDays)
+    function statTotalDays() {
+    let spanTdays = document.createElement("span")
+    document.querySelector(".totalDays").appendChild(spanTdays)
+    spanTdays.setAttribute("id", "spanTdays")
 
+    let statisticsTotalDay = Number(document.querySelectorAll(".dateDiv").length)
+    document.querySelector("#spanTdays").innerHTML = statisticsTotalDay
+
+}
+setInterval(statTotalDays, 100);
+//--- END --- Statistics --- END ---
