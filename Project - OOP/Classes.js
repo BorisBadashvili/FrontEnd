@@ -22,7 +22,7 @@ class Snake {
 
         if (didEatFood) {
             score += 10
-            // document.querySelector("#score").innerHTML = "Score :" + "  " + score
+            document.querySelector("#score").innerHTML = "Score :" + "  " + score
             food.createFood();
         } else {
             snake.body.pop()
@@ -50,6 +50,7 @@ class Food {
         this.block = 10;
         this.foodX
         this.foodY 
+        this.foodList = []
     };
 
     randomFood(min, max) {
@@ -59,6 +60,7 @@ class Food {
     createFood() {
         this.foodX = this.randomFood(0, canvas.width - 10);
         this.foodY = this.randomFood(0, canvas.width - 10);
+        this.foodList.push({x: this.foodX, y: this.foodY})
 
         snake.body.forEach( (part) => {
             const foodIsOnSnake = part.x === this.foodX && part.y == this.foodY  
@@ -70,12 +72,17 @@ class Food {
                 this.createFood();
             }
         })
+    };
+    foodArray() {
+        for(let i = 0; i < foodQuantity; i++) {
+            this.createFood();
+        }
     }
-    
+
     drawFood() {
+        this.foodList.forEach(food =>{
         ctx.fillStyle = 'green';
         ctx.fillRect(this.foodX, this.foodY, this.block, this.block);
         ctx.strokeRect(this.foodX, this.foodY, this.block, this.block);
-    };
-
+    })};
 }

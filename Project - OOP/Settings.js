@@ -7,6 +7,7 @@ let canvasHeight = canvas.height
 let storage = window.localStorage
 let speed = 250
 let score = 0
+let highScore
 let startGame = document.querySelector("#startGame")
 let snakeBlock
 let snakeBlockId = document.querySelector("#snakeBlock")
@@ -15,9 +16,11 @@ let bH = document.querySelector("#boardH")
 let foodQuantity = document.querySelector("#food")
 let foodAmount
 
-// let snakeBlock = document.querySelector("#snakeBlock").value
-
 //  --------------------------------------------------------------------------------------
+window.onload = function() {
+    highScore = storage.getItem('highScore')
+    document.querySelector("#score").innerHTML = "Highest Score is : " + highScore
+}
 
 // BoardOMeter -- Checking if there is avaliable value for (board W/H) in LocalStorage
 let boardOMeter = function () {
@@ -57,10 +60,14 @@ let SnakeOMeter = function () {
 let foodOMeter = function() {
     if(localStorage.getItem('foodQuantity') !== null) {
         foodAmount = parseInt(storage.getItem('foodQuantity'))
-        console.log(foodAmount);
+    } else {
+        foodAmount = 1
     }
 }
+// ScoreOMeter -- Checking if there is avaliable value for HighScore in LocalStorage
+let scoreOMeter = function() {
 
+}
 
 // Function Bundle 
 

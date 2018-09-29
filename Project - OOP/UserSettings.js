@@ -16,6 +16,11 @@ function saveBoard() {
 function saveFood() {
     storage.setItem('foodQuantity', foodQuantity.value)
 }
+// HighScore to Local Storage.
+function saveHighScore() {
+    if(score > highScore)
+        storage.setItem('highScore', score)
+}
 // Function bundle
 
 let saveUserSettings = function() {
