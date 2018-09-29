@@ -14,12 +14,12 @@ function saveBoard() {
 }
 // FoodQuantity to Local Storage.
 function saveFood() {
-
+    storage.setItem('foodQuantity', foodQuantity.value)
 }
-
 // Function bundle
 
 let saveUserSettings = function() {
+    saveFood();
     saveSnakeSpeed();
     saveSnakeBlock();
     // saveBoard();

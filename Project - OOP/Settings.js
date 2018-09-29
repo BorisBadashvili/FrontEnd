@@ -12,7 +12,8 @@ let snakeBlock
 let snakeBlockId = document.querySelector("#snakeBlock")
 let bW = document.querySelector("#boardW")
 let bH = document.querySelector("#boardH")
-let foodQuantity 
+let foodQuantity = document.querySelector("#food")
+let foodAmount
 
 // let snakeBlock = document.querySelector("#snakeBlock").value
 
@@ -53,14 +54,20 @@ let SnakeOMeter = function () {
 }
 
 // FoodOMeter --  Checking if there is avaliable value for FoodQuantity in LocalStorage
-
+let foodOMeter = function() {
+    if(localStorage.getItem('foodQuantity') !== null) {
+        foodAmount = parseInt(storage.getItem('foodQuantity'))
+        console.log(foodAmount);
+    }
+}
 
 
 // Function Bundle 
 
 let getUserSettings = function () {
-    // boardOMeter();
+    foodOMeter();
     SnakeOMeter();
     speedOMeter();
     main();
+    // boardOMeter();
 }
