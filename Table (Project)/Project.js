@@ -104,16 +104,16 @@ function averageGrade() {
 
 // Statistics - totalDays.
 
+let spanTdays = document.createElement("span")
+document.querySelector(".totalDays").appendChild(spanTdays)
+spanTdays.setAttribute("id", "spanTdays")
     function statTotalDays() { // This function creates SPAN pushes content into it.
-    let spanTdays = document.createElement("span")
-    document.querySelector(".totalDays").appendChild(spanTdays)
-    spanTdays.setAttribute("id", "spanTdays")
 
     let statisticsTotalDay = Number(document.querySelectorAll(".dateDiv").length) // Calculates how much .dateDiv-s are there and throws a number into a previously created SPAN.
     document.querySelector("#spanTdays").innerHTML = statisticsTotalDay
 
 }
-setInterval(statTotalDays, 100);
+setInterval(statTotalDays, 1000);
 
 //--- END --- Statistics - totalDays --- END ---
 
@@ -121,21 +121,15 @@ setInterval(statTotalDays, 100);
 
 //  Statistics - Missed Lessons
 
-// function missedLessons() {
-//     debugger;
-    
-//     {
-//         let mLessons = 0
-//         mLessons++;
+function missedLessons() {
+    debugger;
+    let mL = Array.from(document.querySelectorAll(".studentGrades"))
+    mL.forEach(function(){
 
-//         let missedLessonSpan = document.createElement("span")
-//         document.querySelector(".missedLessons").appendChild(missedLessonSpan)
-//         spanTdays.setAttribute("id", "missedLessonSpan")
-//         document.querySelector("#missedLessonSpan").innerHTML = mLessons;
-//         let sum = 0;
-//         sum + 1;
-//         } 
-// } 
-// setInterval(missedLessons, 100);
+
+    });
+    console.log(mL)
+    return mL
+}
 
 // --- END --- Statistics - Missed Lessons --- END ---

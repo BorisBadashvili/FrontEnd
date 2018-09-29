@@ -249,7 +249,7 @@
             border-radius: 6px;     
         }
         .studentGrades {
-            background: red;
+            background: rgba(255, 0, 0, 1);
             color: white;
             width: 35px;
             height: 28px;

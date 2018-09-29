@@ -1,0 +1,23 @@
+h1 {
+  text-align: center;
+  color: aqua;
+  font-style: italic
+}
+canvas {
+  border:  1px solid black;
+  margin: auto;
+  display: flex;
+  margin-top: 50px;
+}
+#settings {
+  display: flex;
+}
+#gameLevel {
+  margin: auto;
+  margin-top: 50px;
+}
+#score{
+  text-align: center;
+  color: black;
+  font-size: 3em;
+}
