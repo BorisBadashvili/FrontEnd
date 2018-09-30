@@ -9,8 +9,8 @@ function saveSnakeBlock() {
 }
 // Board W/H to Local Storage.
 function saveBoard() {
-    storage.setItem('boardW', boardW.value)
-    storage.setItem('boardH', boardH.value)
+    storage.setItem('boardW', bW.value)
+    storage.setItem('boardH', bH.value)
 }
 // FoodQuantity to Local Storage.
 function saveFood() {
@@ -27,5 +27,5 @@ let saveUserSettings = function() {
     saveFood();
     saveSnakeSpeed();
     saveSnakeBlock();
-    // saveBoard();
+    saveBoard();
 }

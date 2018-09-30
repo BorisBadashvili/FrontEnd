@@ -26,8 +26,9 @@ window.onload = function() {
 let boardOMeter = function () {
     canvasWidth = parseInt(localStorage.getItem("boardW"))
     canvasHeight = parseInt(localStorage.getItem("boardH"))
+    canvas.width = canvasWidth
+    canvas.height = canvasHeight
 }
-boardOMeter()
 // SpeedOMeter -- Checking if there is avaliable value for speed in LocalStorage
 let speedOMeter = function () {
     if (localStorage.getItem('speed') !== null) {
@@ -76,5 +77,5 @@ let getUserSettings = function () {
     SnakeOMeter();
     speedOMeter();
     main();
-    // boardOMeter();
+    boardOMeter();
 }
