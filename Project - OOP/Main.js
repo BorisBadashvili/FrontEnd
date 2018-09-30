@@ -53,7 +53,7 @@ let main = function () {
         ctx.fillStyle = "grey"; 
         ctx.fillRect(0, 0, canvasWidth, canvas.height); // Take a look at this.
         saveHighScore();
-        return;
+        // return;
     }
     setTimeout(function onTick() {
         clearCanvas();
