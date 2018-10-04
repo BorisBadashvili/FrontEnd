@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,36 +8,41 @@
   <link rel="stylesheet" href="Project.css">
   <title>Snake</title>
 </head>
+
 <body>
-  <!-- <h1>Project 2 - Snake</h1> -->
 
   <h1 id="score"></h1>
-  
-  <div id="startGameDiv">
-    <button id="startGame">Start Game!</button>
-  </div>
-  <canvas id="myCanvas" height="400" width="400"></canvas>
-  <div id="settings">
-    <h2>User Settings:  </h2>
-    <h3>Choose Difficulty</h3>
-    <div>
-      <button id="novice">Novice</button>
-      <button id="Intermediate">Intermediate</button>
-      <button id="Expert">Expert</button>
+  <!-- <div id="wrapper"> -->
+    <div id="startGameDiv">
+      <button id="startGame">Start Game!</button>
     </div>
-    <h3>Initial Snake Length</h3>
-    <input type="text" placeholder="1 = 1 (block) of a snake" id="snakeBlock">
-    <h3>Choose Board Size</h3>
-    <input  id="boardW" placeholder="Width">
-    <input  id="boardH" placeholder="Height">
-    <h3>Food Quantity</h3>
-    <input id="food" placeholder="Food Quantity">
-    <button id="save">Save Settings!</button>
-  </div>
+    <canvas id="myCanvas" height="400" width="400"></canvas>
+
+
+    <div id="settings">
+      <h2>User Settings: </h2>
+      <h3>Choose Difficulty</h3>
+      <div>
+        <button id="novice">Novice</button>
+        <button id="Intermediate">Intermediate</button>
+        <button id="Expert">Expert</button>
+      </div>
+
+      <h3>Initial Snake Length</h3>
+      <input type="text" placeholder="1 = 1 (block) of a snake" id="snakeBlock">
+      <h3>Choose Board Size</h3>
+      <input id="boardW" placeholder="Width">
+      <input id="boardH" placeholder="Height">
+      <h3>Food Quantity</h3>
+      <input id="food" placeholder="Food Quantity">
+      <button id="save">Save Settings!</button>
+    </div>
+  <!-- </div> -->
 
   <script src="Settings.js"></script>
   <script src="Classes.js"></script>
   <script src="UserSettings.js"></script>
   <script src="Main.js"></script>
 </body>
+
 </html>

@@ -75,6 +75,7 @@ let scoreOMeter = function () {
 // Function Bundle 
 
 let getUserSettings = function () {
+    clearCanvas();
     foodOMeter();
     SnakeOMeter();
     speedOMeter();

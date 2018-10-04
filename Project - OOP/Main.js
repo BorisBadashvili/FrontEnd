@@ -8,21 +8,29 @@ let changeDirection = function (event) {
 
     switch (eventKeyCode) {
         case 37: // left arrow
+        if(!(snake.movementX === 10)){
             snake.movementX = -10
             snake.movementY = 0
-            break;
+        }
+        break;
         case 38: // up arrow
+        if(!(snake.movementY === -10)) {
             snake.movementX = 0
             snake.movementY = 10
-            break;
+        }
+        break;
         case 39: // right arrow
+        if(!(snake.movementX === -10)){
             snake.movementX = 10
             snake.movementY = 0
-            break;
+        }
+        break;
         case 40: // down arrow
+        if(!(snake.movementY === 10)){
             snake.movementX = 0
             snake.movementY = -10
-            break;
+        }
+        break;
     }
 }
 
@@ -53,7 +61,7 @@ let main = function () {
         ctx.fillStyle = "grey"; 
         ctx.fillRect(0, 0, canvasWidth, canvas.height); // Take a look at this.
         saveHighScore();
-        // return;
+        return;
     }
     setTimeout(function onTick() {
         clearCanvas();
