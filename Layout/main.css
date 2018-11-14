@@ -1,0 +1,211 @@
+body {
+    /* width: 60%; */
+    margin: auto;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.headerWrapper {
+    background-image: url(https://scontent.ftbs5-1.fna.fbcdn.net/v/t1.15752-9/46248109_298185571022200_4437593603597926400_n.jpg?_nc_cat=107&_nc_ht=scontent.ftbs5-1.fna&oh=c7d11d304e2f94e4c905debb2eaf2f4c&oe=5C8284E4);
+    height: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navigation {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    color: white;
+}
+
+#tingo {
+    margin-right: 100px;
+    margin-left: 100px;
+    font-size: 2em;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.headerDiv {
+    margin: 20px;
+    font-size: 1.2em;
+    line-height: 75px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.headerDiv:hover {
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+    opacity: 1;
+}
+
+.headertext {
+    text-align: center;
+    color: whitesmoke;
+}
+
+#h1txt {
+    padding-top: 80px;
+    font-size: 4em;
+}
+
+#ptxt {
+    padding-top: 20px;
+    font-size: 1.9em;
+}
+
+#bbooknow {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+#booknow {
+    display: flex;
+    justify-content: center;
+    /* text-align: center; */
+    padding: 0.46em 1.6em;
+    border: 0.1em solid #000000;
+    border-radius: 15px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: #000000;
+    text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+    background-color: #FFFFFF;
+    text-align: center;
+    transition: all 0.15s;
+    height: 45px;
+    width: 140px;
+}
+
+#booknow:hover {
+    text-shadow: 0 0 2em rgba(255, 255, 255, 1);
+    color: purple;
+    background-color: seagreen;
+    border: 2px dashed blue;
+    border-color: #FFFFFF;
+}
+
+#myhr {
+    margin: auto;
+    border-radius: 25px;
+    width: 5%;
+    background-color: black;
+    height: 10px;
+}
+
+.footerWrapper {
+    height: 750px;
+    background-image: url(https://images.unsplash.com/photo-1505764761634-1d77b57e1966?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=30286b3f40ddc9f21ef51e4d0ee0d7e1&auto=format&fit=crop&w=634&q=80);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+
+.footertxt {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 2em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#inputdiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+.myform input {
+    width: 400px;
+    height: 40px;
+    text-align: center;
+    border-radius: 20px;
+    color: black;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.myform button {
+    width: 200px;
+    height: 40px;
+    background-color: limegreen;
+    font-size: 1.2em;
+    border-radius: 20px;
+}
+
+input,
+button:focus {
+    outline: none !important;
+}
+
+.mainfooter {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.mainfooter p,
+h2 {
+    margin: 15px;
+}
+
+.followus h2 {
+    text-align: center;
+    font-size: 2em;
+}
+
+.followus {
+    flex: 0.4;
+    height: 70px;
+    border-bottom: 1px solid black;
+}
+
+.socialmediaicons {
+    width: 45px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 55px;
+    text-align: center;
+    align-items: center;
+    background-color: purple;
+    font-size: 1.5em;
+}
+
+#socialimedia {
+    padding-top: 30px;
+    display: flex;
+}
+
+.socialmediaicons:hover {
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+    box-shadow:
+        1px 1px #53a7ea,
+        2px 2px #53a7ea,
+        3px 3px #53a7ea;
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+}
+
+#socialid {
+    text-align: center;
+    padding-top: 15px;
+    font-size: 1.5em;
+}
+
+#icons {
+    display: flex;
+    justify-content: center;
+}
